@@ -3,6 +3,7 @@ const queryBlogBySlug = `query BlogBySlug ($slug: String) {
       filter: {slug: {eq: $slug}}
     ) {
       date
+      slug
       title
       image {
         url

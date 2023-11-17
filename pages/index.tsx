@@ -16,34 +16,19 @@ const Home: FC<IProps> = ({ blogs }) => {
 
     return <>
         <Head>
-            <title>Links Reinoceronte</title>
+            <title>LP Event</title>
             <meta name="language" content="pt-BR"/>
-            <meta property="og:type" content="company"/>
-            <meta property="og:title" content="Links Reinoceronte"/>
-            <meta property="og:description" content="Links Reinoceronte"/>
+            <meta property="og:title" content="LP Event"/>
+            <meta property="og:description" content="LP Event"/>
             <meta property="og:image" content={`${process.env.NEXT_PUBLIC_DOMAIN}/img/thumbnail.png`}/>
             <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN}/>
-            <meta property="og:site_name" content="Reinoceronte"/>
-            <meta property="fb:admins" content=""/>
-            <meta name="twitter:card" content="summary"/>
+            <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:url" content={process.env.NEXT_PUBLIC_DOMAIN}/>
-            <meta name="twitter:title" content="Links Reinoceronte"/>
-            <meta name="twitter:description" content="Links Reinoceronte"/>
+            <meta name="twitter:title" content="LP Event"/>
+            <meta name="twitter:description" content="LP Event"/>
             <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_DOMAIN}/img/thumbnail.png`}/>
-            <meta name="author" content="Reinoceronte"/>
-            <meta name="creator" content="Mp Tech"/>
-            <meta name="publisher" content="Reinoceronte"/>
-            <meta name="description" content="Links Reinoceronte"/>
-            <meta name="copyright" content="©Reinoceronte. Todos os direitos reservados."/>
-            <meta name="keywords" content="link Reinoceronte whatsapp"/>
-            <meta name="rating" content="general"/>
-            <meta name="robots" content="index, follow"/>
-            <meta name="geo.region" content=""/>
-            <meta name="geo.position" content=""/>
-            <meta name="geo.placename" content="Reinoceronte"/>
-            <meta name="msapplication-TileColor" content="#F9B956"/>
+            <meta name="description" content="LP Event"/>
             <meta name="theme-color" content="#F9B956"/>
-            <link rel="canonical" href={process.env.NEXT_PUBLIC_DOMAIN} data-baseprotocol="https:" data-basehost={process.env.NEXT_PUBLIC_DOMAIN.replace('https://', '')}/>
         </Head>
         <Container>
             {!completed ? <Countdown onComplete={() => setCompleted(true)} date={date}/> : (
