@@ -1,5 +1,5 @@
 import IBlog from '../types/blog'
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
 import Head from 'next/head'
 import { Container, Countdown, CountdownMessage, Blogs, Blog, ImageBlog, TitleBlog, More, InstagramEmbed } from '../styles/pages'
 import { GetServerSideProps } from 'next'
@@ -11,8 +11,12 @@ interface IProps {
 }
 
 const Home: FC<IProps> = ({ blogs }) => {
+    const [isLoad, setIsLoad] = useState(false)
     const date = new Date('12-15-2023').getTime()
-    const [completed, setCompleted] = useState(false)
+
+    useEffect(() => {
+        setIsLoad(true)
+    }, [])
 
     return <>
         <Head>
@@ -31,8 +35,10 @@ const Home: FC<IProps> = ({ blogs }) => {
             <meta name="theme-color" content="#F9B956"/>
         </Head>
         <Container>
-            {!completed ? <Countdown onComplete={() => setCompleted(true)} date={date}/> : (
-                <CountdownMessage>O evento começou! 🥳</CountdownMessage>
+            {isLoad && (
+                <Countdown date={date}>
+                    <CountdownMessage>O evento começou! 🥳</CountdownMessage>
+                </Countdown>
             )}
             <Blogs>
                 {blogs.map(blog => 
@@ -50,7 +56,9 @@ const Home: FC<IProps> = ({ blogs }) => {
                     </Blog>
                 )}
             </Blogs>
-            <InstagramEmbed url="https://www.instagram.com/p/CzpAOmcPU1e"/>
+            {isLoad && (
+                <InstagramEmbed url="https://www.instagram.com/p/CzYjRGnOanK"/>
+            )}
         </Container>
     </>
 }

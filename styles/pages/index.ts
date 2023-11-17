@@ -30,6 +30,10 @@ export const Blogs = styled.div`
     margin-top: 5em;
     align-self: center;
     flex-direction: row;
+
+    @media screen and (max-width: 1100px) {
+        justify-content: space-evenly;
+    }
 `
 
 export const Blog = styled(Link)`
@@ -67,15 +71,10 @@ export const More = styled.div`
 
 export const InstagramEmbed = styled(InstagramEmbedRaw)`
     width: 30em;
+    margin-top: 3em;
     align-self: center;
 
-    && {
-        iframe {
-            .HoverCard {
-                display: none !important;
-            }
-            background-color: red !important;
-        }
-        
+    @media screen and (max-width: 550px) {
+        width: 90%;
     }
 `
