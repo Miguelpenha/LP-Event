@@ -25,11 +25,13 @@ const Home: FC<IProps> = ({ blogs }) => {
             <meta name="language" content="pt-BR"/>
             <meta property="og:title" content="LP Event"/>
             <meta property="og:description" content="LP Event"/>
+            <meta property="og:image" content={`${process.env.NEXT_PUBLIC_DOMAIN}/img/thumbnail.png`}/>
             <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN}/>
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:url" content={process.env.NEXT_PUBLIC_DOMAIN}/>
             <meta name="twitter:title" content="LP Event"/>
             <meta name="twitter:description" content="LP Event"/>
+            <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_DOMAIN}/img/thumbnail.png`}/>
             <meta name="description" content="LP Event"/>
             <meta name="theme-color" content="#F9B956"/>
         </Head>
