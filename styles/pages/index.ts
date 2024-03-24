@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import CountdownRaw from 'react-countdown'
 import Link from 'next/link'
 import Image from 'next/image'
-import { InstagramEmbed as InstagramEmbedRaw } from 'react-social-media-embed'
 
 export const Container = styled.main`
     display: flex;
@@ -66,15 +65,5 @@ export const More = styled.div`
 
     :hover {
         text-decoration: underline;
-    }
-`
-
-export const InstagramEmbed = styled(InstagramEmbedRaw)`
-    width: 30em;
-    margin-top: 3em;
-    align-self: center;
-
-    @media screen and (max-width: 550px) {
-        width: 90%;
     }
 `
